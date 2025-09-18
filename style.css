@@ -1,0 +1,82 @@
+/* Professional adjustments */
+.nav-item.active {
+  background: rgba(16, 185, 129, 0.12);
+  font-weight: 600;
+  color: #065f46;
+}
+.view {
+  display: none;
+}
+.assistant {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 360px;
+  max-width: calc(100% - 48px);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(2, 6, 23, 0.12);
+  overflow: hidden;
+  background: white;
+}
+.assistant.min {
+  height: 48px;
+  width: 220px;
+}
+.assistant .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: linear-gradient(90deg, #ecfccb, #bbf7d0);
+}
+.assistant .content {
+  padding: 12px;
+}
+/* Custom Toggle Switch for UI */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: #16A34A;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #16A34A;
+}
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+/* Rounded sliders */
+.slider.round {
+  border-radius: 24px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
